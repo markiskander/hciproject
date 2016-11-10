@@ -8,6 +8,11 @@ body {
   color:white !important;
 }
 
+#main_menu_selector {
+  margin-left:auto;
+  margin-right:auto;
+}
+
 #selector_signup, #selector_continue, #selector_login {
   width: 290px !important;
   height: 490px !important;
@@ -19,6 +24,7 @@ body {
 }
 #selector_signup:hover {
   background-image: url('images/signup_hover.png');
+  cursor:pointer;
 }
 
 #selector_continue {
@@ -26,6 +32,7 @@ body {
 }
 #selector_continue:hover {
   background-image: url('images/continue_hover.png');
+  cursor:pointer;
 }
 
 #selector_login {
@@ -33,6 +40,7 @@ body {
 }
 #selector_login:hover {
   background-image: url('images/login_hover.png');
+  cursor:pointer;
 }
 
 #selector_signup {
