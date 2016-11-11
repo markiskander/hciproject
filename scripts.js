@@ -3,5 +3,13 @@ function testFunction() {
 }
 
 function goToSignup() {
-    window.location.href = "menu.html"; 
+    window.location.href = "signup.html";
+}
+
+function goToMenu() {
+    window.location.href = "menu.html";
+}
+
+function goToLogin() {
+    window.location.href = "login.html";
 }
