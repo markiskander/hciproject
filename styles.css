@@ -43,6 +43,20 @@ body {
   cursor:pointer;
 }
 
-#selector_signup {
+#logo_cell {
+  background-image: url('images/j_logo.jpg');
+  height: 70px;
+  width: 70px;
+}
 
+#logo_table {
+  margin-left:23%;
+  margin-top:-10px;
+  padding-bottom: 30px;
+}
+
+#logo_title {
+  margin-left:30px;
+  padding-left: 15px;
+  font-family:impact;
 }
