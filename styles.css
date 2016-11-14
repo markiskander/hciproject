@@ -16,7 +16,6 @@ body {
 #selector_signup, #selector_continue, #selector_login {
   width: 290px !important;
   height: 490px !important;
-  border-radius:15px;
 }
 
 #selector_signup {
