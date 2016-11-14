@@ -4,15 +4,39 @@
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-  <table id="logo_table">
+  <table id="logo_table" onclick="goToHome()">
     <tr>
       <th id="logo_cell"></th>
       <th id="logo_title"><h2 id="logo_font">Joey's Gallery<h2></th>
     </tr>
   </table>
-  
-  <h1>Signup Screen Placeholder</h1>
-  <a href="index.html" class="link">Back to Home Page</a>
+
+  <h1 id="signup_title">Sign Up</h1>
+
+  <form id="signup_form">
+    <div id="signup_input_title">First Name</div>
+    <input type="text" name="firstname" class="signup_input">
+    <br><br>
+    <div id="signup_input_title">Last Name</div>
+    <input type="text" name="lastname" class="signup_input">
+    <br><br>
+    <div id="signup_input_title">Email</div>
+    <input type="text" name="email" class="signup_input">
+    <br><br>
+    <div id="signup_input_title">Address</div>
+    <input type="text" name="address1" class="signup_input" id="streetnumber_input" placeholder="Street #">
+    <input type="text" name="address2" class="signup_input" id="street_input" placeholder="Street">
+    <br>
+    <input type="text" name="address3" class="signup_input" id="city_input" placeholder="City">
+    <input type="text" name="address4" class="signup_input" id="postalcode_input" placeholder="Postal Code">
+    <br><br>
+    <div id="signup_input_title">Password</div>
+    <input type="password" name="lastname" class="signup_input">
+    <br><br>
+  </form>
+
+<button id="signup_submit" onclick="completeSignup()">Submit</button>
+
 </body>
 <script src="scripts.js"></script>
 </html>
