@@ -18,8 +18,9 @@ function goToHome() {
   window.location.href = "index.html";
 }
 
-function completeSignup() {
+function completeSignupOrLogin() {
   var inputs = document.getElementsByClassName("signup_input");
+  var numInputs = inputs.length;
   var formFilledOut = true;
 
   for (var i = 0; i < inputs.length; i++) {
@@ -30,7 +31,12 @@ function completeSignup() {
 
   if(formFilledOut)
   {
-    window.alert("You have successfully signed up! (Prototypically, that is)");
+    if(numInputs == 8){
+      window.alert("You have successfully signed up! (Prototypically, that is)");
+    }
+    else if(numInputs == 2){
+      window.alert("You have successfully logged in! (Prototypically, that is)");
+    }
     goToHome();
   }
   else
