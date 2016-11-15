@@ -46,7 +46,20 @@ function completeSignupOrLogin() {
 }
 
 function openItem1() {
+  document.getElementsByClassName("special_instructions")[0].value = "";
   document.getElementById("overlay").style.display = "block";
+  var title = document.getElementsByClassName("item_detail_title")[0];
+  var ingredients = document.getElementsByClassName("item_ingredients")[0];
+  var allergens = document.getElementsByClassName("item_allergens")[0];
+  var extraOptions = document.getElementsByClassName("extra_options")[0];
+
+  var checkbox = "<input type='checkbox'>";
+
+  title.innerHTML = "Fettuccine Alfredo";
+  ingredients.innerHTML = "Fettuccine Pasta<br>Butter<br>Salt and Pepper<br>2-Cheese Blend";
+  allergens.innerHTML = "None"
+  extraOptions.innerHTML = checkbox + "Add chicken<br>" + checkbox + "Extra cheese<br>";
+  extraOptions.innerHTML += checkbox + "Extra sauce";
 }
 
 function openItem2() {
@@ -71,4 +84,8 @@ function openItem6() {
 
 function closeOverlay() {
   document.getElementById("overlay").style.display = "none";
+}
+
+function submitPress() {
+  closeOverlay();
 }
