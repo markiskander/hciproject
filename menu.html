@@ -33,8 +33,17 @@
   </div>
 
   <div id="overlay">
-    <div id="item_details">
+    <div id="item_detail_block">
       <img id="exit_button" onclick="closeOverlay()" src="images/exit_button.jpg" height="30" width="30">
+      <div class="item_detail_title">Placeholder</div>
+      <div class="item_ingredients_title">Ingredients</div>
+      <div class="item_ingredients"></div>
+      <div class="item_allergens_title">Potential Allergens</div>
+      <div class="item_allergens"></div>
+      <div class="special_instructions_title">Special Instructions</div>
+      <textarea name="special_instructions" onclick="eraseText()" class="special_instructions" cols="26" rows="7"></textarea>
+      <div class="extra_options"></div>
+      <div class="submit_button" onclick="submitPress()">Submit</div>
     </div>
   </div>
 </body>
