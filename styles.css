@@ -199,3 +199,14 @@ body {
   margin-top: 5px;
   cursor: pointer;
 }
+
+.item_price {
+  background-color: black;
+  width: 50px;
+  color: white;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin-left: -1px;
+  margin-top: 149px;
+  font-weight:bold;
+}
