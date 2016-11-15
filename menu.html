@@ -14,26 +14,28 @@
   <h2 style="margin-left:23%;">Menu</h2>
 
   <div id="menu_block">
-    <table id="menu_table">
+    <table id="pasta_table" class="menu_table">
       <tr class="menu_row">
-        <td class="menu_item_left" id="item1"><div class="item_title">Fettuccine Alfredo</div></td>
-        <td class="menu_item_right" id="item2"><div class="item_title">4-Cheese Lasagna</div></td>
+        <td class="menu_item_left" id="item1" onclick="openItem1()"><div class="item_title">Fettuccine Alfredo</div></td>
+        <td class="menu_item_right" id="item2" onclick="openItem2()"><div class="item_title">4-Cheese Lasagna</div></td>
       </tr>
       <tr class="menu_row">
-        <td class="menu_item_left" id="item3">lolz</td>
-        <td class="menu_item_right" id="item4">lol</td>
+        <td class="menu_item_left" id="item3" onclick="openItem3()"><div class="item_title">Seafood Linguine</div></td>
+        <td class="menu_item_right" id="item4" onclick="openItem4()"><div class="item_title">Spaghetti Meatballs</div></td>
       </tr>
       <tr class="menu_row">
-        <td class="menu_item_left" id="item5">lolz</td>
-        <td class="menu_item_right" id="item6">lol</td>
-      </tr>
-      <tr class="menu_row">
-        <td class="menu_item_left" id="item7">lolz</td>
-        <td class="menu_item_right" id="item8">lol</td>
+        <td class="menu_item_left" id="item5" onclick="openItem5()"><div class="item_title">Tomato Rotini</div></td>
+        <td class="menu_item_right" id="item6" onclick="openItem6()"><div class="item_title">Beef Ravioli</div></td>
       </tr>
     </table>
 
 
+  </div>
+
+  <div id="overlay">
+    <div id="item_details">
+      <img id="exit_button" onclick="closeOverlay()" src="images/exit_button.jpg" height="30" width="30">
+    </div>
   </div>
 </body>
 <script src="scripts.js"></script>

@@ -44,3 +44,31 @@ function completeSignupOrLogin() {
     window.alert("Please fill out all fields.");
   }
 }
+
+function openItem1() {
+  document.getElementById("overlay").style.display = "block";
+}
+
+function openItem2() {
+  document.getElementById("overlay").style.display = "block";
+}
+
+function openItem3() {
+  document.getElementById("overlay").style.display = "block";
+}
+
+function openItem4() {
+  document.getElementById("overlay").style.display = "block";
+}
+
+function openItem5() {
+  document.getElementById("overlay").style.display = "block";
+}
+
+function openItem6() {
+  document.getElementById("overlay").style.display = "block";
+}
+
+function closeOverlay() {
+  document.getElementById("overlay").style.display = "none";
+}
