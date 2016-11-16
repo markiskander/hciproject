@@ -2,11 +2,8 @@ var tabs = ["pasta", "steak", "soup", "beverage", "dessert"];
 var alreadyAlerted = false;
 var currentItem = 0;
 var alreadyCleared = false;
-var priceTotal = 0;
 var orderedItems = []; // store objects in this that kinda work like {item #, extra1 0/1, extra2 0/1, extra3 0/1}
                        // we need this because we need to stop ignoring it. it's important for the checkout
-                       // also need to add extra pricing ugh
-
 var items = [
 {
 },
@@ -522,7 +519,6 @@ function submitPress() {
   var checkbox1 = document.getElementById("checkbox1");
   var checkbox2 = document.getElementById("checkbox2");
   var checkbox3 = document.getElementById("checkbox3");
-  var orderItems = document.getElementById("order_items");
   var curr = items[currentItem];
   var currPriceTotal = 0;
 
@@ -533,11 +529,6 @@ function submitPress() {
     extra3:0,
     price_total:0
   };
-
-  if(alreadyCleared == false){
-    orderItems.innerHTML = "";
-    alreadyCleared = true;
-  }
 
   currPriceTotal += curr.price;
 
@@ -556,16 +547,34 @@ function submitPress() {
     itemObject.extra3 = 1;
   }
 
-  orderItems.innerHTML += curr.name + " - " + currPriceTotal.toFixed(2) + "<br><br>";
-  priceTotal += currPriceTotal;
-
   itemObject.price_total = currPriceTotal;
 
   orderedItems = orderedItems.concat(itemObject);
 
-  document.getElementById("order_total_amount").innerHTML = priceTotal.toFixed(2);
-
+  drawOrderSummary();
   closeOverlay();
+}
+
+function drawOrderSummary() {
+  var orderItems = document.getElementById("order_items");
+  var curr;
+  var total = 0;
+
+  orderItems.innerHTML = ""; //clear it first, just in case
+
+  if(orderedItems.length == 0){
+    orderItems.innerHTML = "Your order is currently empty";
+  }
+  else{
+    for(var i = 0; i < orderedItems.length; i++){
+      curr = orderedItems[i];
+
+      orderItems.innerHTML += items[curr.item_num].name + " - " + curr.price_total.toFixed(2) + "<br><br>";
+      total += curr.price_total;
+    }
+  }
+
+  document.getElementById("order_total_amount").innerHTML = total.toFixed(2);
 }
 
 function goToTab(target) {
@@ -597,6 +606,9 @@ function checkOut() {
   if(orderedItems == 0)
   {
     alert("You must add items to your order before checking out!");
+    document.getElementById("overlay").style.display = "none";
+    document.getElementById("item_detail_block").style.display = "none";
+    document.getElementById("checkout_block").style.display = "none";
   }
   else{
     var htmlOutput = "";
@@ -622,6 +634,10 @@ function checkOut() {
 
       htmlOutput += curr.price_total.toFixed(2);
 
+      htmlOutput += "</td><td class='order_delete_button'>";
+
+      htmlOutput += "<img onclick='deleteOrder(" + i + ")' src='images/delete_button.jpg' height='10' width='10'>";
+
       htmlOutput += "</td></tr>";
     }
 
@@ -629,4 +645,10 @@ function checkOut() {
 
     checkoutList.innerHTML = htmlOutput;
   }
+}
+
+function deleteOrder(numToDelete){
+  orderedItems.splice(numToDelete, 1);
+  drawOrderSummary();
+  checkOut();
 }
