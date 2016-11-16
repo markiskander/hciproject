@@ -409,7 +409,7 @@ body {
 }
 
 #order_summary {
-  width: 168px;
+  width: 220px;
   border-style: solid;
   border-color: white;
   border-width: 1px;
@@ -430,6 +430,25 @@ body {
 #order_items {
   padding-left: 4px;
   padding-top: 5px;
+}
+
+#order_total {
+  width: 100px;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+  border-top-style: none;
+  padding: 5px;
+  margin-left: 510px;
+}
+
+#order_total_title {
+  font-weight:bold;
+  display:inline;
+}
+
+#order_total_amount {
+  display:inline;
 }
 
 #dietary_restrictions_input {
