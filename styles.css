@@ -275,3 +275,21 @@ body {
   margin-top: 21px;
   cursor:pointer;
 }
+
+#tab_selector {
+  margin-left:23%;
+  width:500px;
+}
+
+#tab_row {
+  cursor:pointer;
+}
+
+.tab_choice {
+  border-width: 48px;
+  border-bottom-width: 0px;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-style: solid;
+  border-color: black;
+}

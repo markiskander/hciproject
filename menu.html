@@ -13,6 +13,18 @@
 
   <h2 style="margin-left:23%;">Menu</h2>
 
+  <div id="tab_selector">
+    <table id="tab_table">
+      <tr id="tab_row">
+        <td id="pasta_tab" class="tab_choice" onclick="goToPastas()">Pastas</td>
+        <td id="steak_tab" class="tab_choice" style="color:grey;" onclick="goToSteaks()">Steaks</td>
+        <td id="soup_tab" class="tab_choice" style="color:grey;" onclick="goToSoups()">Soups</td>
+        <td id="beverage_tab" class="tab_choice" style="color:grey;" onclick="goToBeverages()">Beverages</td>
+        <td id="dessert_tab" class="tab_choice" style="color:grey;" onclick="goToDesserts()">Desserts</td>
+      </tr>
+    </table>
+
+  </div>
   <div id="menu_block">
     <table id="pasta_table" class="menu_table">
       <tr class="menu_row">
@@ -26,6 +38,17 @@
       <tr class="menu_row">
         <td class="menu_item_left" id="item5" onclick="openItem5()"><div class="item_title">Tomato Rotini</div><div class="item_price">20.99</div></td>
         <td class="menu_item_right" id="item6" onclick="openItem6()"><div class="item_title">Beef Ravioli</div><div class="item_price">17.99</div></td>
+      </tr>
+    </table>
+    
+    <table id="steaks_table" style="display:none;" class="menu_table">
+      <tr class="menu_row">
+        <td class="menu_item_left" id="item7" onclick="openItem7()"><div class="item_title">Top Sirloin</div><div class="item_price">22.99</div></td>
+        <td class="menu_item_right" id="item8" onclick="openItem8()"><div class="item_title">New York Steak</div><div class="item_price">21.99</div></td>
+      </tr>
+      <tr class="menu_row">
+        <td class="menu_item_left" id="item9" onclick="openItem9()"><div class="item_title">Peppercorn Steak</div><div class="item_price">26.99</div></td>
+        <td class="menu_item_right" id="item10" onclick="openItem10()"><div class="item_title">Sirloin Oscar</div><div class="item_price">31.99</div></td>
       </tr>
     </table>
 
