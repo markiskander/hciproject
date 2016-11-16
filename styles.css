@@ -173,6 +173,22 @@ body {
   background-image: url('images/ravioli.jpg');
 }
 
+#item7{
+  background-image: url('images/topsirloin.jpg');
+}
+
+#item8{
+  background-image: url('images/newyorksteak.jpg');
+}
+
+#item9{
+  background-image: url('images/peppercornsteak.jpg');
+}
+
+#item10{
+  background-image: url('images/sirloinoscar.jpg');
+}
+
 .item_title{
   font-weight: bold;
   background-color: rgba(0, 0, 0, 0.5);
