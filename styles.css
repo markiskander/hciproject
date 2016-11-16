@@ -508,6 +508,10 @@ body {
   font-weight: bold;
 }
 
+.checkout_list_table_cell_right {
+  width:59px;
+}
+
 .order_delete_button {
-  padding-left:19px;
+  cursor:pointer;
 }
