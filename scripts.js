@@ -1,4 +1,5 @@
 var tabs = ["pasta", "steak", "soup", "beverage", "dessert"];
+var alreadyAlerted = false;
 
 function goToSignup() {
   window.location.href = "signup.html";
@@ -266,6 +267,18 @@ function goToTab(target) {
     else{
       document.getElementById(tabs[i] + "_table").style.display = "none";
       document.getElementById(tabs[i] + "_tab").style.color = "grey";
+    }
+  }
+}
+
+function dietaryAlert() {
+  var checkboxes = document.getElementsByClassName("dietary_checkbox");
+
+  for(var i = 0; i < checkboxes.length && alreadyAlerted == false; i++){
+    if(checkboxes[i].checked)
+    {
+      alert("Please note that for prototyping reasons, this section is not functional.");
+      alreadyAlerted = true;
     }
   }
 }

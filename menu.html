@@ -11,7 +11,7 @@
     </tr>
   </table>
 
-  <h2 style="margin-left:23%;">Menu</h2>
+  <h2 id="menu_caption">Menu</h2>
 
   <div id="tab_selector">
     <table id="tab_table">
@@ -97,6 +97,16 @@
       </tr>
     </table>
 
+    <div id="dietary_restrictions">
+      <div id="dietary_restrictions_title">Dietary Restrictions</div>
+      <div id="dietary_restrictions_input">
+        <input type='checkbox' class="dietary_checkbox" onclick="dietaryAlert()">Vegetarian<br>
+        <input type='checkbox' class="dietary_checkbox" onclick="dietaryAlert()">Gluten-free<br>
+        <input type='checkbox' class="dietary_checkbox" onclick="dietaryAlert()">Low sugar<br>
+        <input type='checkbox' class="dietary_checkbox" onclick="dietaryAlert()">Nut-free<br>
+      </div>
+
+    </div>
   </div>
 
   <div id="overlay">
@@ -117,7 +127,7 @@
 <script src="scripts.js"></script>
 <script>
   window.onbeforeunload = function() {
-    return "Due to this being a prototype, your order will be lost if you leave the page. Are you sure you want to leave?";
+    //return "Due to this being a prototype, your order will be lost if you leave the page. Are you sure you want to leave?";
   };
 </script>
 </html>
