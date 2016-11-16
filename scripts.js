@@ -16,7 +16,8 @@ var items = [
   allergens:"None",
   extra1:"Add chicken",
   extra2:"Extra cheese",
-  extra3:"Extra sauce"
+  extra3:"Extra sauce",
+  price:14.99
 },
 {
   name:"4-Cheese Lasagna",
@@ -27,7 +28,8 @@ var items = [
   allergens:"None",
   extra1:"Add beef",
   extra2:"Extra cheese",
-  extra3:"Light cheese"
+  extra3:"Light cheese",
+  price:17.99
 },
 {
   name:"Seafood Linguine",
@@ -38,7 +40,8 @@ var items = [
   allergens:"Seafood sensitivity",
   extra1:"Extra shrimp",
   extra2:"Add Italian sausage",
-  extra3:"Extra sauce"
+  extra3:"Extra sauce",
+  price:21.99
 },
 {
   name:"Spaghetti Meatballs",
@@ -49,7 +52,8 @@ var items = [
   allergens:"None",
   extra1:"Extra meatballs",
   extra2:"Add sausage",
-  extra3:"Add cheese"
+  extra3:"Add cheese",
+  price:19.99
 },
 {
   name:"Tomato Rotini",
@@ -60,7 +64,8 @@ var items = [
   allergens:"None",
   extra1:"Add chicken",
   extra2:"Add sausage",
-  extra3:"Extra cheese"
+  extra3:"Extra cheese",
+  price:20.99
 },
 {
   name:"Beef Ravioli",
@@ -71,7 +76,8 @@ var items = [
   allergens:"None",
   extra1:"Add sausage",
   extra2:"Add cheese",
-  extra3:"Extra sauce"
+  extra3:"Extra sauce",
+  price:17.99
 },
 {
   name:"Top Sirloin",
@@ -82,7 +88,8 @@ var items = [
   allergens:"None",
   extra1:"Add mushrooms",
   extra2:"Upsize (+ 4oz)",
-  extra3:"Extra mashed potatoes"
+  extra3:"Extra mashed potatoes",
+  price:22.99
 },
 {
   name:"New York Steak",
@@ -93,7 +100,8 @@ var items = [
   allergens:"None",
   extra1:"Add mushrooms",
   extra2:"Upsize (+ 6oz)",
-  extra3:"Extra vegetables"
+  extra3:"Extra vegetables",
+  price:21.99
 },
 {
   name:"Peppercorn Steak",
@@ -104,7 +112,8 @@ var items = [
   allergens:"Peanuts (if selected)",
   extra1:"Add nut medley",
   extra2:"Upsize (+ 4oz)",
-  extra3:"Add mushrooms"
+  extra3:"Add mushrooms",
+  price:26.99
 },
 {
   name:"Sirloin Oscar",
@@ -115,7 +124,8 @@ var items = [
   allergens:"Seafood sensitivity",
   extra1:"Add shrimp",
   extra2:"Extra sauce",
-  extra3:"Add vegetables"
+  extra3:"Add vegetables",
+  price:31.99
 },
 {
   name:"Chicken Gnocci",
@@ -126,7 +136,8 @@ var items = [
   allergens:"None",
   extra1:"Add cheese",
   extra2:"Extra chicken",
-  extra3:"No parsley"
+  extra3:"No parsley",
+  price:6.99
 },
 {
   name:"Chicken Noodles",
@@ -137,7 +148,8 @@ var items = [
   allergens:"None",
   extra1:"Extra chicken",
   extra2:"Extra vegetable",
-  extra3:"Upsize (2x)"
+  extra3:"Upsize (2x)",
+  price:4.99
 },
 {
   name:"Cream of Broccoli",
@@ -148,7 +160,8 @@ var items = [
   allergens:"None",
   extra1:"Add sausage",
   extra2:"Extra cheese",
-  extra3:"Extra broccoli"
+  extra3:"Extra broccoli",
+  price:7.99
 },
 {
   name:"Zuppa Toscana",
@@ -159,7 +172,8 @@ var items = [
   allergens:"None",
   extra1:"Extra sausage",
   extra2:"Extra bacon",
-  extra3:"Add cheese"
+  extra3:"Add cheese",
+  price:5.99
 },
 {
   name:"Spicy Thai",
@@ -170,7 +184,8 @@ var items = [
   allergens:"None",
   extra1:"Extra chicken",
   extra2:"Extra cheese",
-  extra3:"Extra vegetables"
+  extra3:"Extra vegetables",
+  price:5.99
 },
 {
   name:"Beef Vegetable",
@@ -181,7 +196,8 @@ var items = [
   allergens:"None",
   extra1:"Extra beef",
   extra2:"Extra vegetables",
-  extra3:"Add bacon"
+  extra3:"Add bacon",
+  price:5.99
 },
 {
   name:"Coca-Cola",
@@ -192,7 +208,8 @@ var items = [
   allergens:"Caffeine sensitivity",
   extra1:"Diet",
   extra2:"Include straw",
-  extra3:"Upsize (2x)"
+  extra3:"Upsize (2x)",
+  price:1.99
 },
 {
   name:"Iced Tea",
@@ -203,7 +220,8 @@ var items = [
   allergens:"None",
   extra1:"Diet",
   extra2:"Include straw",
-  extra3:"Upsize (2x)"
+  extra3:"Upsize (2x)",
+  price:1.99
 },
 {
   name:"Ginger Ale",
@@ -214,7 +232,8 @@ var items = [
   allergens:"None",
   extra1:"Diet",
   extra2:"Include straw",
-  extra3:"Upsize (2x)"
+  extra3:"Upsize (2x)",
+  price:1.99
 },
 {
   name:"Root Beer",
@@ -225,7 +244,8 @@ var items = [
   allergens:"None",
   extra1:"Diet",
   extra2:"Include straw",
-  extra3:"Upsize (2x)"
+  extra3:"Upsize (2x)",
+  price:1.99
 },
 {
   name:"Coffee",
@@ -236,7 +256,8 @@ var items = [
   allergens:"Caffeine sensitivity",
   extra1:"Decaf",
   extra2:"Add milk",
-  extra3:"Add sugar"
+  extra3:"Add sugar",
+  price:1.50
 },
 {
   name:"Tea",
@@ -247,7 +268,8 @@ var items = [
   allergens:"Caffeine sensitivity",
   extra1:"Decaf",
   extra2:"Add milk",
-  extra3:"Add sugar"
+  extra3:"Add sugar",
+  price:1.50
 },
 {
   name:"Swirl Ice Cream",
@@ -258,7 +280,8 @@ var items = [
   allergens:"Peanuts (if selected)",
   extra1:"Add nuts",
   extra2:"Add chocolate sauce",
-  extra3:"Upsize (2x)"
+  extra3:"Upsize (2x)",
+  price:3.99
 },
 {
   name:"Chocolate Brownie",
@@ -269,7 +292,8 @@ var items = [
   allergens:"None",
   extra1:"Add chocolate sauce",
   extra2:"Add strawberry sauce",
-  extra3:"Upsize (2x)"
+  extra3:"Upsize (2x)",
+  price:3.99
 },
 {
   name:"Strawberry Sundae",
@@ -280,7 +304,8 @@ var items = [
   allergens:"None",
   extra1:"Extra strawberries",
   extra2:"Extra strawberry sauce",
-  extra3:"Add chocolate sauce"
+  extra3:"Add chocolate sauce",
+  price:4.99
 },
 {
   name:"Chocolate Death",
@@ -291,7 +316,8 @@ var items = [
   allergens:"None",
   extra1:"Add chocolate sauce",
   extra2:"Add brownie",
-  extra3:"Upsize (2x)"
+  extra3:"Upsize (2x)",
+  price:5.99
 },
 {
   name:"Apple Pie",
@@ -302,7 +328,8 @@ var items = [
   allergens:"None",
   extra1:"Extra crispy",
   extra2:"Add ice cream",
-  extra3:"Upsize (2x)"
+  extra3:"Upsize (2x)",
+  price:4.99
 },
 {
   name:"Strawberry Cheesecake",
@@ -313,7 +340,8 @@ var items = [
   allergens:"None",
   extra1:"Extra strawberries",
   extra2:"Add ice cream",
-  extra3:"Add chocolate sauce"
+  extra3:"Add chocolate sauce",
+  price:5.99
 },
 ];
 
@@ -404,6 +432,8 @@ function submitPress() {
     orderItems.innerHTML = "";
     alreadyCleared = true;
   }
+
+
 
   if(currentItem == 1){
     orderItems.innerHTML += "Fettuccine Alfredo - 14.99<br><br>";
