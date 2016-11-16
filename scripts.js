@@ -257,7 +257,7 @@ var items = [
   extra1:"Decaf",
   extra2:"Add milk",
   extra3:"Add sugar",
-  price:1.50
+  price:1.59
 },
 {
   name:"Tea",
@@ -269,7 +269,7 @@ var items = [
   extra1:"Decaf",
   extra2:"Add milk",
   extra3:"Add sugar",
-  price:1.50
+  price:1.59
 },
 {
   name:"Swirl Ice Cream",
@@ -427,19 +427,17 @@ function closeOverlay() {
 
 function submitPress() {
   var orderItems = document.getElementById("order_items");
+  var curr = items[currentItem];
 
   if(alreadyCleared == false){
     orderItems.innerHTML = "";
     alreadyCleared = true;
   }
 
+  orderItems.innerHTML += curr.name + " - " + curr.price + "<br><br>";
+  priceTotal += curr.price;
 
-
-  if(currentItem == 1){
-    orderItems.innerHTML += "Fettuccine Alfredo - 14.99<br><br>";
-    priceTotal += 14.99;
-  }
-
+  document.getElementById("order_total_amount").innerHTML = priceTotal.toFixed(2);
 
   closeOverlay();
 }
