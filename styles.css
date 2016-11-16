@@ -189,6 +189,54 @@ body {
   background-image: url('images/sirloinoscar.jpg');
 }
 
+#item11{
+  background-image: url('images/chickengnocci.jpg');
+}
+
+#item12{
+  background-image: url('images/chickennoodle.jpg');
+}
+
+#item13{
+  background-image: url('images/creamofbroccoli.jpg');
+}
+
+#item14{
+  background-image: url('images/zuppatoscana.jpg');
+}
+
+#item15{
+  background-image: url('images/spicythai.jpg');
+}
+
+#item16{
+  background-image: url('images/beefvegetable.jpg');
+}
+
+#item17{
+  background-image: url('images/cocacola.jpg');
+}
+
+#item18{
+  background-image: url('images/icedtea.jpg');
+}
+
+#item19{
+  background-image: url('images/gingerale.jpg');
+}
+
+#item20{
+  background-image: url('images/rootbeer.jpg');
+}
+
+#item21{
+  background-image: url('images/coffee.jpg');
+}
+
+#item22{
+  background-image: url('images/tea.jpg');
+}
+
 .item_title{
   font-weight: bold;
   background-color: rgba(0, 0, 0, 0.5);
