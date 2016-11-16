@@ -3,6 +3,9 @@ var alreadyAlerted = false;
 var currentItem = 0;
 var alreadyCleared = false;
 var priceTotal = 0;
+var orderedItems = []; // store objects in this that kinda work like {item #, extra1 0/1, extra2 0/1, extra3 0/1}
+                       // we need this because we need to stop ignoring it. it's important for the checkout
+                       // also need to add extra pricing ugh
 
 var items = [
 {
@@ -17,6 +20,9 @@ var items = [
   extra1:"Add chicken",
   extra2:"Extra cheese",
   extra3:"Extra sauce",
+  extra1price:3.99,
+  extra2price:2.99,
+  extra3price:0.99,
   price:14.99
 },
 {
@@ -29,6 +35,9 @@ var items = [
   extra1:"Add beef",
   extra2:"Extra cheese",
   extra3:"Light cheese",
+  extra1price:3.99,
+  extra2price:2.99,
+  extra3price:0.00,
   price:17.99
 },
 {
@@ -41,6 +50,9 @@ var items = [
   extra1:"Extra shrimp",
   extra2:"Add Italian sausage",
   extra3:"Extra sauce",
+  extra1price:4.99,
+  extra2price:4.99,
+  extra3price:0.99,
   price:21.99
 },
 {
@@ -53,6 +65,9 @@ var items = [
   extra1:"Extra meatballs",
   extra2:"Add sausage",
   extra3:"Add cheese",
+  extra1price:3.99,
+  extra2price:2.99,
+  extra3price:1.99,
   price:19.99
 },
 {
@@ -65,6 +80,9 @@ var items = [
   extra1:"Add chicken",
   extra2:"Add sausage",
   extra3:"Extra cheese",
+  extra1price:3.99,
+  extra2price:2.99,
+  extra3price:1.99,
   price:20.99
 },
 {
@@ -77,6 +95,9 @@ var items = [
   extra1:"Add sausage",
   extra2:"Add cheese",
   extra3:"Extra sauce",
+  extra1price:3.99,
+  extra2price:2.99,
+  extra3price:0.99,
   price:17.99
 },
 {
@@ -89,6 +110,9 @@ var items = [
   extra1:"Add mushrooms",
   extra2:"Upsize (+ 4oz)",
   extra3:"Extra mashed potatoes",
+  extra1price:1.99,
+  extra2price:7.99,
+  extra3price:1.99,
   price:22.99
 },
 {
@@ -101,6 +125,9 @@ var items = [
   extra1:"Add mushrooms",
   extra2:"Upsize (+ 6oz)",
   extra3:"Extra vegetables",
+  extra1price:1.99,
+  extra2price:7.99,
+  extra3price:0.99,
   price:21.99
 },
 {
@@ -113,6 +140,9 @@ var items = [
   extra1:"Add nut medley",
   extra2:"Upsize (+ 4oz)",
   extra3:"Add mushrooms",
+  extra1price:1.99,
+  extra2price:7.99,
+  extra3price:0.99,
   price:26.99
 },
 {
@@ -125,6 +155,9 @@ var items = [
   extra1:"Add shrimp",
   extra2:"Extra sauce",
   extra3:"Add vegetables",
+  extra1price:4.99,
+  extra2price:0.99,
+  extra3price:0.99,
   price:31.99
 },
 {
@@ -137,6 +170,9 @@ var items = [
   extra1:"Add cheese",
   extra2:"Extra chicken",
   extra3:"No parsley",
+  extra1price:2.99,
+  extra2price:3.99,
+  extra3price:0.00,
   price:6.99
 },
 {
@@ -149,6 +185,9 @@ var items = [
   extra1:"Extra chicken",
   extra2:"Extra vegetable",
   extra3:"Upsize (2x)",
+  extra1price:1.99,
+  extra2price:1.99,
+  extra3price:2.99,
   price:4.99
 },
 {
@@ -161,6 +200,9 @@ var items = [
   extra1:"Add sausage",
   extra2:"Extra cheese",
   extra3:"Extra broccoli",
+  extra1price:3.99,
+  extra2price:1.99,
+  extra3price:0.99,
   price:7.99
 },
 {
@@ -173,6 +215,9 @@ var items = [
   extra1:"Extra sausage",
   extra2:"Extra bacon",
   extra3:"Add cheese",
+  extra1price:2.99,
+  extra2price:1.99,
+  extra3price:1.99,
   price:5.99
 },
 {
@@ -185,6 +230,9 @@ var items = [
   extra1:"Extra chicken",
   extra2:"Extra cheese",
   extra3:"Extra vegetables",
+  extra1price:2.99,
+  extra2price:1.99,
+  extra3price:0.99,
   price:5.99
 },
 {
@@ -197,6 +245,9 @@ var items = [
   extra1:"Extra beef",
   extra2:"Extra vegetables",
   extra3:"Add bacon",
+  extra1price:2.99,
+  extra2price:0.99,
+  extra3price:1.99,
   price:5.99
 },
 {
@@ -209,6 +260,9 @@ var items = [
   extra1:"Diet",
   extra2:"Include straw",
   extra3:"Upsize (2x)",
+  extra1price:0.00,
+  extra2price:0.00,
+  extra3price:0.99,
   price:1.99
 },
 {
@@ -221,6 +275,9 @@ var items = [
   extra1:"Diet",
   extra2:"Include straw",
   extra3:"Upsize (2x)",
+  extra1price:0.00,
+  extra2price:0.00,
+  extra3price:0.99,
   price:1.99
 },
 {
@@ -233,6 +290,9 @@ var items = [
   extra1:"Diet",
   extra2:"Include straw",
   extra3:"Upsize (2x)",
+  extra1price:0.00,
+  extra2price:0.00,
+  extra3price:0.99,
   price:1.99
 },
 {
@@ -245,6 +305,9 @@ var items = [
   extra1:"Diet",
   extra2:"Include straw",
   extra3:"Upsize (2x)",
+  extra1price:0.00,
+  extra2price:0.00,
+  extra3price:0.99,
   price:1.99
 },
 {
@@ -257,6 +320,9 @@ var items = [
   extra1:"Decaf",
   extra2:"Add milk",
   extra3:"Add sugar",
+  extra1price:0.00,
+  extra2price:0.00,
+  extra3price:0.00,
   price:1.59
 },
 {
@@ -269,6 +335,9 @@ var items = [
   extra1:"Decaf",
   extra2:"Add milk",
   extra3:"Add sugar",
+  extra1price:0.00,
+  extra2price:0.00,
+  extra3price:0.00,
   price:1.59
 },
 {
@@ -281,6 +350,9 @@ var items = [
   extra1:"Add nuts",
   extra2:"Add chocolate sauce",
   extra3:"Upsize (2x)",
+  extra1price:0.99,
+  extra2price:0.99,
+  extra3price:1.99,
   price:3.99
 },
 {
@@ -293,6 +365,9 @@ var items = [
   extra1:"Add chocolate sauce",
   extra2:"Add strawberry sauce",
   extra3:"Upsize (2x)",
+  extra1price:0.99,
+  extra2price:0.99,
+  extra3price:1.99,
   price:3.99
 },
 {
@@ -305,6 +380,9 @@ var items = [
   extra1:"Extra strawberries",
   extra2:"Extra strawberry sauce",
   extra3:"Add chocolate sauce",
+  extra1price:0.99,
+  extra2price:0.99,
+  extra3price:0.99,
   price:4.99
 },
 {
@@ -317,6 +395,9 @@ var items = [
   extra1:"Add chocolate sauce",
   extra2:"Add brownie",
   extra3:"Upsize (2x)",
+  extra1price:0.99,
+  extra2price:1.99,
+  extra3price:2.99,
   price:5.99
 },
 {
@@ -329,6 +410,9 @@ var items = [
   extra1:"Extra crispy",
   extra2:"Add ice cream",
   extra3:"Upsize (2x)",
+  extra1price:0.99,
+  extra2price:1.99,
+  extra3price:2.99,
   price:4.99
 },
 {
@@ -341,6 +425,9 @@ var items = [
   extra1:"Extra strawberries",
   extra2:"Add ice cream",
   extra3:"Add chocolate sauce",
+  extra1price:0.99,
+  extra2price:1.99,
+  extra3price:0.99,
   price:5.99
 },
 ];
@@ -391,12 +478,16 @@ function completeSignupOrLogin() {
 function openItem(item) {
   document.getElementsByClassName("special_instructions")[0].value = "";
   document.getElementById("overlay").style.display = "block";
+  document.getElementById("item_detail_block").style.display = "block";
+  document.getElementById("checkout_block").style.display = "none";
 
   var title = document.getElementsByClassName("item_detail_title")[0];
   var ingredients = document.getElementsByClassName("item_ingredients")[0];
   var allergens = document.getElementsByClassName("item_allergens")[0];
   var extraOptions = document.getElementsByClassName("extra_options")[0];
-  var checkbox = "<input type='checkbox'>";
+  var checkbox1 = "<input type='checkbox' id='checkbox1'>";
+  var checkbox2 = "<input type='checkbox' id='checkbox2'>";
+  var checkbox3 = "<input type='checkbox' id='checkbox3'>";
   var curr = items[item];
 
   currentItem = item;
@@ -416,26 +507,61 @@ function openItem(item) {
 
   allergens.innerHTML = curr.allergens;
 
-  extraOptions.innerHTML += checkbox + curr.extra1;
-  extraOptions.innerHTML += "<br>" + checkbox + curr.extra2;
-  extraOptions.innerHTML += "<br>" + checkbox + curr.extra3;
+  extraOptions.innerHTML += checkbox1 + curr.extra1 + " - " + curr.extra1price.toFixed(2);
+  extraOptions.innerHTML += "<br>" + checkbox2 + curr.extra2 + " - " + curr.extra2price.toFixed(2);
+  extraOptions.innerHTML += "<br>" + checkbox3 + curr.extra3 + " - " + curr.extra3price.toFixed(2);
 }
 
 function closeOverlay() {
   document.getElementById("overlay").style.display = "none";
+  document.getElementById("item_detail_block").style.display = "none";
+  document.getElementById("checkout_block").style.display = "none";
 }
 
 function submitPress() {
+  var checkbox1 = document.getElementById("checkbox1");
+  var checkbox2 = document.getElementById("checkbox2");
+  var checkbox3 = document.getElementById("checkbox3");
   var orderItems = document.getElementById("order_items");
   var curr = items[currentItem];
+  var currPriceTotal = 0;
+
+  var itemObject = {
+    item_num:currentItem,
+    extra1:0,
+    extra2:0,
+    extra3:0,
+    price_total:0
+  };
 
   if(alreadyCleared == false){
     orderItems.innerHTML = "";
     alreadyCleared = true;
   }
 
-  orderItems.innerHTML += curr.name + " - " + curr.price + "<br><br>";
-  priceTotal += curr.price;
+  currPriceTotal += curr.price;
+
+  if(checkbox1 != null && checkbox1.checked){
+    currPriceTotal += curr.extra1price;
+    itemObject.extra1 = 1;
+  }
+
+  if(checkbox2 != null && checkbox2.checked){
+    currPriceTotal += curr.extra2price;
+    itemObject.extra2 = 1;
+  }
+
+  if(checkbox3 != null && checkbox3.checked){
+    currPriceTotal += curr.extra3price;
+    itemObject.extra3 = 1;
+  }
+
+  orderItems.innerHTML += curr.name + " - " + currPriceTotal.toFixed(2) + "<br><br>";
+  priceTotal += currPriceTotal;
+
+  itemObject.price_total = currPriceTotal;
+
+  orderedItems = orderedItems.concat(itemObject);
 
   document.getElementById("order_total_amount").innerHTML = priceTotal.toFixed(2);
 
@@ -464,5 +590,43 @@ function dietaryAlert() {
       alert("Please note that for prototyping reasons, this section is not functional.");
       alreadyAlerted = true;
     }
+  }
+}
+
+function checkOut() {
+  if(orderedItems == 0)
+  {
+    alert("You must add items to your order before checking out!");
+  }
+  else{
+    var htmlOutput = "";
+
+    document.getElementById("overlay").style.display = "block";
+    document.getElementById("item_detail_block").style.display = "none";
+    document.getElementById("checkout_block").style.display = "block";
+
+    var checkoutList = document.getElementsByClassName("checkout_list")[0];
+
+    htmlOutput += "<table id='checkout_list_table'>";
+
+    for(var i = 0; i < orderedItems.length; i++)
+    {
+      var curr = orderedItems[i];
+
+      htmlOutput += "<tr class='checkout_list_table_row'>"
+      htmlOutput += "<td class='checkout_list_table_cell_left'>";
+
+      htmlOutput += (i + 1) + ". " + items[curr.item_num].name;
+
+      htmlOutput += "</td><td class='checkout_list_table_cell_right'>";
+
+      htmlOutput += curr.price_total.toFixed(2);
+
+      htmlOutput += "</td></tr>";
+    }
+
+    htmlOutput += "</table>";
+
+    checkoutList.innerHTML = htmlOutput;
   }
 }
