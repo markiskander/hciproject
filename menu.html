@@ -105,7 +105,11 @@
         <input type='checkbox' class="dietary_checkbox" onclick="dietaryAlert()">Low sugar<br>
         <input type='checkbox' class="dietary_checkbox" onclick="dietaryAlert()">Nut-free<br>
       </div>
+    </div>
 
+    <div id="order_summary">
+      <div id="order_summary_title">Order Summary</div>
+      <div id="order_items">Your order is currently empty.</div>
     </div>
   </div>
 
@@ -120,7 +124,7 @@
       <div class="special_instructions_title">Special Instructions</div>
       <textarea name="special_instructions" onclick="eraseText()" class="special_instructions" cols="26" rows="7"></textarea>
       <div class="extra_options"></div>
-      <div class="submit_button" onclick="submitPress()">Submit</div>
+      <div id="submit_button" onclick="submitPress()">Submit</div>
     </div>
   </div>
 </body>

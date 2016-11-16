@@ -359,7 +359,7 @@ body {
   margin-top: 20px;
 }
 
-.submit_button {
+#submit_button {
   color: white;
   font-weight: bold;
   width: 68px;
@@ -406,6 +406,30 @@ body {
   border-width: 2px;
   padding-bottom: 3px;
   font-weight:bold;
+}
+
+#order_summary {
+  width: 168px;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+  padding: 5px;
+  margin-top: -141px;
+  margin-left: 510px;
+}
+
+#order_summary_title {
+  border-bottom-style: solid;
+  border-color: white;
+  border-width: 2px;
+  padding-bottom: 3px;
+  font-weight:bold;
+  text-align:center;
+}
+
+#order_items {
+  padding-left: 4px;
+  padding-top: 5px;
 }
 
 #dietary_restrictions_input {
