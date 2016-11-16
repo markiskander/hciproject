@@ -630,6 +630,36 @@ function checkOut() {
 
       htmlOutput += (i + 1) + ". " + items[curr.item_num].name;
 
+      htmlOutput += "<div class='extras'>";
+
+      if(curr.extra1 == 0 && curr.extra2 == 0 && curr.extra3 == 0){
+        htmlOutput += "<br>No extras";
+      }
+      else{
+        var extra1 = items[curr.item_num].extra1;
+        var extra1price = items[curr.item_num].extra1price;
+        var extra2 = items[curr.item_num].extra2;
+        var extra2price = items[curr.item_num].extra2price;
+        var extra3 = items[curr.item_num].extra3;
+        var extra3price = items[curr.item_num].extra3price;
+
+        if(curr.extra1 == 1){
+          htmlOutput += "<br>" + extra1 + " - " + extra1price.toFixed(2);
+        }
+
+        if(curr.extra2 == 1){
+          htmlOutput += "<br>" + extra2 + " - " + extra2price.toFixed(2);
+        }
+
+        if(curr.extra3 == 1){
+          htmlOutput += "<br>" + extra3 + " - " + extra3price.toFixed(2);
+        }
+      }
+
+
+      htmlOutput += "</div>"
+
+
       htmlOutput += "</td><td class='checkout_list_table_cell_right'>";
 
       htmlOutput += curr.price_total.toFixed(2);
