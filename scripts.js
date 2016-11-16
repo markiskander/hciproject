@@ -205,6 +205,48 @@ function openItem(item) {
     allergens.innerHTML = "Caffeine sensitivity";
     extraOptions.innerHTML = checkbox + "Decaf<br>" + "<br><br>";
   }
+  else if(item == 23){
+    title.innerHTML = "Swirl Ice Cream";
+    ingredients.innerHTML = "Vanilla Ice Cream<br>Chocolate Ice Cream<br>Strawberry Ice Cream<br>Sugar";
+    allergens.innerHTML = "Peanuts (if selected)";
+    extraOptions.innerHTML = checkbox + "Add nuts<br>" + checkbox + "Add chocolate sauce<br>";
+    extraOptions.innerHTML += checkbox + "Upsize (2x)";
+  }
+  else if(item == 24){
+    title.innerHTML = "Chocolate Brownie";
+    ingredients.innerHTML = "Soft Dough<br>Chocolate<br>Sugar<br>Flour";
+    allergens.innerHTML = "None";
+    extraOptions.innerHTML = checkbox + "Add chocolate sauce<br>" + checkbox + "Add strawberry sauce<br>";
+    extraOptions.innerHTML += checkbox + "Upsize (2x)";
+  }
+  else if(item == 25){
+    title.innerHTML = "Strawberry Sundae";
+    ingredients.innerHTML = "Vanilla Ice Cream<br>Strawberry Sauce<br>Fresh Strawberries<br>Sugar";
+    allergens.innerHTML = "None";
+    extraOptions.innerHTML = checkbox + "Extra strawberries<br>" + checkbox + "Extra sauce<br>";
+    extraOptions.innerHTML += checkbox + "Add chocolate sauce";
+  }
+  else if(item == 26){
+    title.innerHTML = "Chocolate Death";
+    ingredients.innerHTML = "Soft Dough<br>Sugar<br>Chocolate<br>Much More Chocolate";
+    allergens.innerHTML = "None";
+    extraOptions.innerHTML = checkbox + "Add chocolate sauce<br>" + checkbox + "Add brownie<br>";
+    extraOptions.innerHTML += checkbox + "Upsize (2x)";
+  }
+  else if(item == 27){
+    title.innerHTML = "Apple Pie";
+    ingredients.innerHTML = "Pastry Dough<br>Fresh Apples<br>Apple Sauce<br>Sugar";
+    allergens.innerHTML = "None";
+    extraOptions.innerHTML = checkbox + "Extra crispy<br>" + checkbox + "Add ice cream<br>";
+    extraOptions.innerHTML += checkbox + "Upsize (2x)";
+  }
+  else if(item == 28){
+    title.innerHTML = "Strawberry Cheesecake";
+    ingredients.innerHTML = "Sweet Cream Cheese<br>Pastry Dough<br>Strawberry Sauce<br>Fresh Strawberries";
+    allergens.innerHTML = "None";
+    extraOptions.innerHTML = checkbox + "Extra sausage<br>" + checkbox + "Extra bacon<br>";
+    extraOptions.innerHTML += checkbox + "Add cheese";
+  }
 }
 
 function closeOverlay() {
