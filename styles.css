@@ -503,10 +503,11 @@ body {
 }
 
 .checkout_list_table_cell_left {
-  display: inline;
-  font-weight:bold;
+  display: block;
+  width: 350px;
+  font-weight: bold;
 }
 
-.checkout_list_table_cell_right {
-
+.order_delete_button {
+  padding-left:19px;
 }
