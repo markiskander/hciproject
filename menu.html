@@ -82,6 +82,20 @@
       </tr>
     </table>
 
+    <table id="dessert_table" style="display:none;" class="menu_table">
+      <tr class="menu_row">
+        <td class="menu_item_left" id="item23" onclick="openItem(23)"><div class="item_title">Swirl Ice Cream</div><div class="item_price">3.99</div></td>
+        <td class="menu_item_right" id="item24" onclick="openItem(24)"><div class="item_title">Chocolate Brownie</div><div class="item_price">3.99</div></td>
+      </tr>
+      <tr class="menu_row">
+        <td class="menu_item_left" id="item25" onclick="openItem(25)"><div class="item_title">Strawberry Sundae</div><div class="item_price">4.99</div></td>
+        <td class="menu_item_right" id="item26" onclick="openItem(26)"><div class="item_title">Chocolate Death</div><div class="item_price">5.99</div></td>
+      </tr>
+      <tr class="menu_row">
+        <td class="menu_item_left" id="item27" onclick="openItem(27)"><div class="item_title">Apple Pie</div><div class="item_price">4.99</div></td>
+        <td class="menu_item_right" id="item28" onclick="openItem(28)"><div class="item_title">Strawberry Cheesecake</div><div class="item_price">5.99</div></td>
+      </tr>
+    </table>
 
   </div>
 
@@ -101,4 +115,9 @@
   </div>
 </body>
 <script src="scripts.js"></script>
+<script>
+  window.onbeforeunload = function() {
+    return "Due to this being a prototype, your order will be lost if you leave the page. Are you sure you want to leave?";
+  };
+</script>
 </html>

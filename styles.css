@@ -237,6 +237,30 @@ body {
   background-image: url('images/tea.jpg');
 }
 
+#item23{
+  background-image: url('images/icecream.jpg');
+}
+
+#item24{
+  background-image: url('images/brownie.jpg');
+}
+
+#item25{
+  background-image: url('images/strawberrysundae.jpg');
+}
+
+#item26{
+  background-image: url('images/chocolatedeath.jpg');
+}
+
+#item27{
+  background-image: url('images/applepie.jpg');
+}
+
+#item28{
+  background-image: url('images/strawberrycheesecake.jpg');
+}
+
 .item_title{
   font-weight: bold;
   background-color: rgba(0, 0, 0, 0.5);
