@@ -118,6 +118,8 @@
       <div id="order_total_title">Total: $</div>
       <div id="order_total_amount">0</div>
     </div>
+
+    <div id="checkout" onclick="checkOut()">Check Out</div>
   </div>
 
   <div id="overlay">
@@ -129,16 +131,23 @@
       <div class="item_allergens_title">Potential Allergens</div>
       <div class="item_allergens"></div>
       <div class="special_instructions_title">Special Instructions</div>
-      <textarea name="special_instructions" onclick="eraseText()" class="special_instructions" cols="26" rows="7"></textarea>
+      <textarea name="special_instructions" class="special_instructions" cols="26" rows="7"></textarea>
       <div class="extra_options"></div>
       <div id="submit_button" onclick="submitPress()">Submit</div>
+    </div>
+
+    <div id="checkout_block">
+      <img id="exit_button" onclick="closeOverlay()" src="images/exit_button.jpg" height="30" width="30">
+      <div class="checkout_title">Check Out</div>
+      <div class="checkout_list"></div>
+
     </div>
   </div>
 </body>
 <script src="scripts.js"></script>
 <script>
   window.onbeforeunload = function() {
-    return "Due to this being a prototype, your order will be lost if you leave the page. Are you sure you want to leave?";
+    //return "Due to this being a prototype, your order will be lost if you leave the page. Are you sure you want to leave?";
   };
 </script>
 </html>
