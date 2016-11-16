@@ -70,6 +70,12 @@ body {
   font-family:Helvetica;
 }
 
+#menu_caption {
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+}
+
 #signup_title {
   text-align:center;
   margin-bottom:40px;
@@ -117,7 +123,8 @@ body {
 #menu_block {
   width:500px;
   height:601px;
-  margin-left:23%;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 .menu_table {
@@ -365,7 +372,8 @@ body {
 }
 
 #tab_selector {
-  margin-left:23%;
+  margin-left:auto;
+  margin-right:auto;
   width:500px;
 }
 
@@ -380,4 +388,31 @@ body {
   border-left-width: 0px;
   border-style: solid;
   border-color: black;
+}
+
+#dietary_restrictions {
+  width: 152px;
+  margin-top: -570px;
+  margin-left: -175px;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+  padding: 5px;
+}
+
+#dietary_restrictions_title {
+  border-bottom-style: solid;
+  border-color: white;
+  border-width: 2px;
+  padding-bottom: 3px;
+  font-weight:bold;
+}
+
+#dietary_restrictions_input {
+  margin-top:6px;
+}
+
+.dietary_checkbox {
+  margin-bottom:9px;
+  margin-right:6px;
 }
