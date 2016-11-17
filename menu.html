@@ -140,7 +140,42 @@
       <img id="exit_button" onclick="closeOverlay()" src="images/exit_button.jpg" height="30" width="30">
       <div class="checkout_title">Check Out</div>
       <div class="checkout_list"></div>
-
+      <div class="payment_block">
+        <div id="payment_title">Payment Information</div>
+        <div id="totals_title">Totals</div>
+        <table id="payment_table">
+          <tr class="payment_row">
+            <td>
+              <div id="credit_card">Card #: </div>
+              <input id="card_input" type="text">
+            </td>
+          </tr>
+          <tr class="payment_row">
+            <td>
+              <div id="card_type">Type: </div>
+              <select id="type_selector">
+                <option value="visa">VISA</option>
+                <option value="mc">MasterCard</option>
+                <option value="amex">American Express</option>
+              </select>
+            </td>
+          </tr>
+          <tr class="payment_row">
+            <td>
+              <div id="expires">Expires: </div>
+              <input type="number" placeholder="MM" id="month_input" min="1" max="12">
+              <input type="number" placeholder="YYYY" id="year_input" min="2016" max="2050">
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="final_totals_block">
+        <table id="final_totals_table">
+          <tr class="final_totals_row">
+            <div id="subtotal_title">Subtotal: </div>
+          </tr>
+        </table>
+      </div>
     </div>
   </div>
 </body>
