@@ -413,13 +413,14 @@ body {
 }
 
 #order_summary {
-  width: 230px;
+  width: 245px;
   border-style: solid;
   border-color: white;
   border-width: 1px;
   padding: 5px;
   margin-top: -141px;
   margin-left: 510px;
+  position: relative;
 }
 
 #order_summary_title {
@@ -469,13 +470,13 @@ body {
   border-width: 1px;
   border-top-width: 0px;
   margin-left: 641px;
-  width: 109px;
+  width: 124px;
   font-weight: bold;
   text-align: center;
   margin-top: -30px;
   padding-top: 6px;
   height: 23px;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 #checkout_block {
@@ -652,4 +653,6 @@ body {
   width: 20px;
   padding-bottom: 5px;
   cursor: pointer;
+  position: absolute;
+  right: 5px;
 }
