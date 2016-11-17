@@ -701,3 +701,22 @@ function deleteOrder(numToDelete){
   drawOrderSummary();
   checkOut();
 }
+
+function completeOrder(){
+  var cardNumber = document.getElementById("card_input").value;
+  var expiryMonth = document.getElementById("month_input").value;
+  var expiryYear = document.getElementById("year_input").value;
+
+  var cardValid = cardNumber != null && cardNumber != "";
+  var expiryMonthValid = expiryMonth != null && expiryMonth != "";
+  var expiryYearValid = expiryYear != null && expiryYear != "";
+
+  if(cardValid && expiryMonthValid && expiryYearValid)
+  {
+    window.alert("Your order has been successfully placed. Thanks for dining at Joey's Gallery!");
+    goToHome();
+  }
+  else {
+    window.alert("Please completely fill out payment information.");
+  }
+}
