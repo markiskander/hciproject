@@ -612,18 +612,26 @@ function checkOut() {
   }
   else{
     var htmlOutput = "";
+    var calculated_subtotal = 0;
+    var calculated_taxes = 0;
+    var calculated_total = 0;
 
     document.getElementById("overlay").style.display = "block";
     document.getElementById("item_detail_block").style.display = "none";
     document.getElementById("checkout_block").style.display = "block";
 
     var checkoutList = document.getElementsByClassName("checkout_list")[0];
+    var subtotal = document.getElementById("subtotal_amount");
+    var taxes = document.getElementById("taxes_amount");
+    var total = document.getElementById("total_amount");
 
     htmlOutput += "<table id='checkout_list_table'>";
 
     for(var i = 0; i < orderedItems.length; i++)
     {
       var curr = orderedItems[i];
+
+      calculated_subtotal += curr.price_total;
 
       htmlOutput += "<tr class='checkout_list_table_row'>"
       htmlOutput += "<td class='checkout_list_table_cell_left'>";
@@ -674,6 +682,17 @@ function checkOut() {
     htmlOutput += "</table>";
 
     checkoutList.innerHTML = htmlOutput;
+
+    subtotal.innerHTML = "$" + calculated_subtotal.toFixed(2);
+
+    calculated_taxes = calculated_subtotal * 0.15;
+
+    taxes.innerHTML = "$" + calculated_taxes.toFixed(2);
+
+    calculated_total = calculated_taxes + calculated_subtotal;
+
+    total.innerHTML = "$" + calculated_total.toFixed(2);
+
   }
 }
 
