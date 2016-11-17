@@ -628,7 +628,7 @@ function checkOut() {
       htmlOutput += "<tr class='checkout_list_table_row'>"
       htmlOutput += "<td class='checkout_list_table_cell_left'>";
 
-      htmlOutput += (i + 1) + ". " + items[curr.item_num].name;
+      htmlOutput += items[curr.item_num].name;
 
       htmlOutput += "<div class='extras'>";
 
@@ -664,9 +664,9 @@ function checkOut() {
 
       htmlOutput += curr.price_total.toFixed(2);
 
-      htmlOutput += "</td><td class='order_delete_button'>";
+      htmlOutput += "</td><td class='order_delete_button' onclick='deleteOrder(" + i + ")'>";
 
-      htmlOutput += "<img onclick='deleteOrder(" + i + ")' src='images/delete_button.jpg' height='10' width='10'>";
+      htmlOutput += "<img src='images/delete_button.jpg' height='10' width='10'>";
 
       htmlOutput += "</td></tr>";
     }
