@@ -569,7 +569,9 @@ function drawOrderSummary() {
     for(var i = 0; i < orderedItems.length; i++){
       curr = orderedItems[i];
 
+      orderItems.innerHTML += "<img src='images/exit_button.jpg' id='remove_order_button' onclick='deleteOrder(" + i + ", false)'>";
       orderItems.innerHTML += items[curr.item_num].name + " - " + curr.price_total.toFixed(2) + "<br><br>";
+
       total += curr.price_total;
     }
   }
@@ -672,7 +674,7 @@ function checkOut() {
 
       htmlOutput += curr.price_total.toFixed(2);
 
-      htmlOutput += "</td><td class='order_delete_button' onclick='deleteOrder(" + i + ")'>";
+      htmlOutput += "</td><td class='order_delete_button' onclick='deleteOrder(" + i + ",true)'>";
 
       htmlOutput += "<img src='images/delete_button.jpg' height='10' width='10'>";
 
@@ -696,10 +698,13 @@ function checkOut() {
   }
 }
 
-function deleteOrder(numToDelete){
+function deleteOrder(numToDelete, insideCheckout){
   orderedItems.splice(numToDelete, 1);
   drawOrderSummary();
-  checkOut();
+
+  if(insideCheckout){
+    checkOut();
+  }
 }
 
 function completeOrder(){

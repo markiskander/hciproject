@@ -646,3 +646,10 @@ body {
 #submit_order_button:hover {
   background-color: #00800b;
 }
+
+#remove_order_button{
+  height: 20px;
+  width: 20px;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
