@@ -32,6 +32,8 @@ body {
 #selector_signup {
   background-image: url('images/signup.png');
   box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.4);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 #selector_signup:hover {
   background-image: url('images/signup_hover.png');
@@ -50,6 +52,8 @@ body {
 #selector_login {
   background-image: url('images/login.png');
   box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.4);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 #selector_login:hover {
   background-image: url('images/login_hover.png');
