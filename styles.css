@@ -5,6 +5,13 @@ body {
   font-family:sans-serif;
 }
 
+.outside_menu_body {
+  background-image: url(images/background.jpg);
+  background-size:initial !important;
+  color:white;
+  font-family:sans-serif;
+}
+
 .link {
   color:white !important;
 }
@@ -121,17 +128,24 @@ body {
 }
 
 .signup_input {
-  text-align:center;
-  width:186px;
+  text-align: center;
+  width: 186px;
+  border-radius: 25px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0);
 }
 
 #signup_submit {
   border: none;
   background-color: white;
   margin-top: 30px;
-  margin-left:auto;
-  margin-right:auto;
-  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border-radius: 25px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0);
+  border-width: 1px;
 }
 
 #menu_block {
@@ -734,4 +748,14 @@ body {
   right: 5px;
   border-radius: 20px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.18);
+}
+
+#signup_login_block {
+  background-color: rgba(0, 0, 0, 0.26);
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  padding-top: 10px;
+  padding-bottom: 40px;
+  border-radius: 30px;
 }

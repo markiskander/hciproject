@@ -3,7 +3,7 @@
 <head>
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<body>
+<body class="outside_menu_body">
   <table id="logo_table" onclick="goToHome()">
     <tr>
       <th id="logo_cell"></th>
@@ -11,18 +11,20 @@
     </tr>
   </table>
 
-  <h1 id="signup_title">Log In</h1>
+  <div id="signup_login_block">
+    <h1 id="signup_title">Log In</h1>
 
-  <form id="signup_form">
-    <div id="signup_input_title">Email</div>
-    <input type="text" name="email" class="signup_input">
-    <br><br>
-    <div id="signup_input_title">Password</div>
-    <input type="password" name="lastname" class="signup_input">
-    <br><br>
-  </form>
+    <form id="signup_form">
+      <div id="signup_input_title">Email</div>
+      <input type="text" name="email" class="signup_input">
+      <br><br>
+      <div id="signup_input_title">Password</div>
+      <input type="password" name="lastname" class="signup_input">
+      <br><br>
+    </form>
 
-<button id="signup_submit" onclick="completeSignupOrLogin()">Submit</button>
+    <button id="signup_submit" onclick="completeSignupOrLogin()">Submit</button>
+  </div>
 
 </body>
 <script src="scripts.js"></script>

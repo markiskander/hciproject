@@ -3,7 +3,7 @@
 <head>
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<body>
+<body class="outside_menu_body">
   <table id="logo_table" onclick="goToHome()">
     <tr>
       <th id="logo_cell"></th>
@@ -11,31 +11,34 @@
     </tr>
   </table>
 
-  <h1 id="signup_title">Sign Up</h1>
+  <div id="signup_login_block">
+    <h1 id="signup_title">Sign Up</h1>
 
-  <form id="signup_form">
-    <div id="signup_input_title">First Name</div>
-    <input type="text" name="firstname" class="signup_input">
-    <br><br>
-    <div id="signup_input_title">Last Name</div>
-    <input type="text" name="lastname" class="signup_input">
-    <br><br>
-    <div id="signup_input_title">Email</div>
-    <input type="text" name="email" class="signup_input">
-    <br><br>
-    <div id="signup_input_title">Address</div>
-    <input type="text" name="address1" class="signup_input" id="streetnumber_input" placeholder="Street #">
-    <input type="text" name="address2" class="signup_input" id="street_input" placeholder="Street">
-    <br>
-    <input type="text" name="address3" class="signup_input" id="city_input" placeholder="City">
-    <input type="text" name="address4" class="signup_input" id="postalcode_input" placeholder="Postal Code">
-    <br><br>
-    <div id="signup_input_title">Password</div>
-    <input type="password" name="lastname" class="signup_input">
-    <br><br>
-  </form>
+    <form id="signup_form">
+      <div id="signup_input_title">First Name</div>
+      <input type="text" name="firstname" class="signup_input">
+      <br><br>
+      <div id="signup_input_title">Last Name</div>
+      <input type="text" name="lastname" class="signup_input">
+      <br><br>
+      <div id="signup_input_title">Email</div>
+      <input type="text" name="email" class="signup_input">
+      <br><br>
+      <div id="signup_input_title">Address</div>
+      <input type="text" name="address1" class="signup_input" id="streetnumber_input" placeholder="Street #">
+      <input type="text" name="address2" class="signup_input" id="street_input" placeholder="Street">
+      <br>
+      <input type="text" name="address3" class="signup_input" id="city_input" placeholder="City">
+      <input type="text" name="address4" class="signup_input" id="postalcode_input" placeholder="Postal Code">
+      <br><br>
+      <div id="signup_input_title">Password</div>
+      <input type="password" name="lastname" class="signup_input">
+      <br><br>
+    </form>
+    <button id="signup_submit" onclick="completeSignupOrLogin()">Submit</button>
+  </div>
 
-<button id="signup_submit" onclick="completeSignupOrLogin()">Submit</button>
+
 
 </body>
 <script src="scripts.js"></script>
