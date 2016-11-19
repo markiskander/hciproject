@@ -114,6 +114,11 @@
       <div id="order_items">Your order is currently empty</div>
     </div>
 
+    <div id="dinein_takeout">
+      <div id="dinein" onclick="switchDining(1)">Dine In</div>
+      <div id="takeout" onclick="switchDining(2)">Take Out</div>
+    </div>
+
     <div id="order_total">
       <div id="order_total_title">Total: $</div>
       <div id="order_total_amount">0.00</div>
@@ -198,9 +203,4 @@
   </div>
 </body>
 <script src="scripts.js"></script>
-<script>
-  window.onbeforeunload = function() {
-    return "Due to this being a prototype, your order will be lost if you leave the page. Are you sure you want to leave?";
-  };
-</script>
 </html>

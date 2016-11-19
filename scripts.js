@@ -598,7 +598,7 @@ function dietaryAlert() {
   for(var i = 0; i < checkboxes.length && alreadyAlerted == false; i++){
     if(checkboxes[i].checked)
     {
-      alert("Please note that for prototyping reasons, this section is not functional.");
+      alert("Please note that for prototyping reasons, this feature is not functional.");
       alreadyAlerted = true;
     }
   }
@@ -723,5 +723,27 @@ function completeOrder(){
   }
   else {
     window.alert("Please completely fill out payment information.");
+  }
+}
+
+function switchDining(mode) {
+  var dineIn = document.getElementById("dinein");
+  var takeOut = document.getElementById("takeout");
+
+  if(mode == 1){ // dine in
+    dineIn.style.backgroundColor = "rgba(0, 0, 0, 0.34)";
+    dineIn.style.fontWeight = "bold";
+    dineIn.style.color = "white";
+    takeOut.style.backgroundColor = "rgba(0, 0, 0, 0)";
+    takeOut.style.fontWeight = "normal";
+    takeOut.style.color = "rgba(255, 255, 255, 0.69)";
+  }
+  else{ // take out
+    takeOut.style.backgroundColor = "rgba(0, 0, 0, 0.34)";
+    takeOut.style.fontWeight = "bold";
+    takeOut.style.color = "white";
+    dineIn.style.backgroundColor = "rgba(0, 0, 0, 0)";
+    dineIn.style.fontWeight = "normal";
+    dineIn.style.color = "rgba(255, 255, 255, 0.69)";
   }
 }
