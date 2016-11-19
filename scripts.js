@@ -598,7 +598,7 @@ function dietaryAlert() {
   for(var i = 0; i < checkboxes.length && alreadyAlerted == false; i++){
     if(checkboxes[i].checked)
     {
-      alert("Please note that for prototyping reasons, this section is not functional.");
+      alert("Please note that for prototyping reasons, this feature is not functional.");
       alreadyAlerted = true;
     }
   }
