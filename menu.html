@@ -17,10 +17,10 @@
     <table id="tab_table">
       <tr id="tab_row">
         <td id="pasta_tab" class="tab_choice" onclick="goToTab('pasta')">Pastas</td>
-        <td id="steak_tab" class="tab_choice" style="color:grey;" onclick="goToTab('steak')">Steaks</td>
-        <td id="soup_tab" class="tab_choice" style="color:grey;" onclick="goToTab('soup')">Soups</td>
-        <td id="beverage_tab" class="tab_choice" style="color:grey;" onclick="goToTab('beverage')">Beverages</td>
-        <td id="dessert_tab" class="tab_choice" style="color:grey;" onclick="goToTab('dessert')">Desserts</td>
+        <td id="steak_tab" class="tab_choice" style="color:#b5b5b5;" onclick="goToTab('steak')">Steaks</td>
+        <td id="soup_tab" class="tab_choice" style="color:#b5b5b5;" onclick="goToTab('soup')">Soups</td>
+        <td id="beverage_tab" class="tab_choice" style="color:#b5b5b5;" onclick="goToTab('beverage')">Beverages</td>
+        <td id="dessert_tab" class="tab_choice" style="color:#b5b5b5;" onclick="goToTab('dessert')">Desserts</td>
       </tr>
     </table>
 
@@ -50,7 +50,7 @@
         <td class="menu_item_left" id="item9" onclick="openItem(9)"><div class="item_title">Peppercorn Steak</div><div class="item_price">26.99</div></td>
         <td class="menu_item_right" id="item10" onclick="openItem(10)"><div class="item_title">Sirloin Oscar</div><div class="item_price">31.99</div></td>
       </tr>
-      <tr class="menu_row">
+      <tr class="menu_row" style="box-shadow:none !important">
       </tr>
     </table>
 
@@ -200,7 +200,7 @@
 <script src="scripts.js"></script>
 <script>
   window.onbeforeunload = function() {
-    //return "Due to this being a prototype, your order will be lost if you leave the page. Are you sure you want to leave?";
+    return "Due to this being a prototype, your order will be lost if you leave the page. Are you sure you want to leave?";
   };
 </script>
 </html>

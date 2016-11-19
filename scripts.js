@@ -587,7 +587,7 @@ function goToTab(target) {
     }
     else{
       document.getElementById(tabs[i] + "_table").style.display = "none";
-      document.getElementById(tabs[i] + "_tab").style.color = "grey";
+      document.getElementById(tabs[i] + "_tab").style.color = "#b5b5b5";
     }
   }
 }
@@ -676,7 +676,7 @@ function checkOut() {
 
       htmlOutput += "</td><td class='order_delete_button' onclick='deleteOrder(" + i + ",true)'>";
 
-      htmlOutput += "<img src='images/delete_button.jpg' height='10' width='10'>";
+      htmlOutput += "<img src='images/delete_button.jpg' style='border-radius:20px;' height='10' width='10'>";
 
       htmlOutput += "</td></tr>";
     }
